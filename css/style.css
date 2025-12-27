@@ -1,0 +1,1218 @@
+/* 基础样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans SC', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 导航栏样式 */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.logo .subtitle {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    font-weight: 300;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s;
+    padding: 5px 0;
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: #3498db;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #3498db;
+    transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #2c3e50;
+    cursor: pointer;
+}
+
+/* 轮播图样式 */
+.hero {
+    position: relative;
+    height: 100vh;
+    margin-top: 70px;
+    overflow: hidden;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-slides {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    height: 100%;
+    background-size: contain; /* 改为contain，显示完整图片 */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f8f9fa; /* 添加背景色，防止图片周围出现空白 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+.carousel-slide-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    max-width: 800px;
+}
+
+.carousel-slide-content h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.carousel-slide-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6); /* 改为深色背景，提高可见性 */
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 15px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    z-index: 10;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-btn:hover {
+    background: rgba(0, 0, 0, 0.8); /* 悬停时更深 */
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-btn.prev {
+    left: 20px;
+}
+
+.carousel-btn.next {
+    right: 20px;
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    z-index: 10;
+}
+
+.carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.6); /* 改为深色背景，提高可见性 */
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); /* 添加阴影增强立体感 */
+}
+
+.carousel-dot.active {
+    background: rgba(0, 0, 0, 0.9); /* 激活状态使用更深的颜色 */
+    transform: scale(1.3); /* 激活状态稍微放大 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4); /* 激活状态阴影更深 */
+}
+
+
+.hero-content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2;
+    width: 90%;
+    max-width: 800px;
+}
+
+.hero-content h2 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
+.hero-content .english-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+.hero-content .hero-description {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.cta-button {
+    display: inline-block;
+    background: #3498db;
+    color: white;
+    padding: 15px 40px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+    border: 2px solid #3498db;
+}
+
+.cta-button:hover {
+    background: transparent;
+    color: #3498db;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+/* 通用部分样式 */
+.section {
+    padding: 80px 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.section-title .title-text {
+    color: #3498db;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+/* 诉求部分样式 - 新版（6个切换+轮播图） */
+.demands {
+    background-color: white;
+}
+
+.demands-container {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+/* 左边：切换按钮 */
+.demands-tabs {
+    flex: 0 0 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.demands-tab {
+    background: #f8f9fa;
+    border: none;
+    padding: 15px 20px;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #2c3e50;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-left: 4px solid transparent;
+}
+
+.demands-tab:hover {
+    background: #e9ecef;
+    transform: translateX(5px);
+}
+
+.demands-tab.active {
+    background: #3498db;
+    color: white;
+    border-left-color: #2980b9;
+    transform: translateX(5px);
+}
+
+/* 右边：内容区域 */
+.demands-content {
+    flex: 1;
+    position: relative;
+    min-height: 500px;
+}
+
+.demands-tab-content {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.demands-tab-content.active {
+    display: block;
+}
+
+/* 诉求模块轮播图样式 */
+.demands-carousel-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.demands-carousel-slides {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.demands-carousel-slide {
+    min-width: 100%;
+    height: 100%;
+    background-size: contain; /* 改为contain，显示完整图片 */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f8f9fa; /* 添加背景色，防止图片周围出现空白 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* 移除叠加层，让图片直接显示 */
+/* .demands-carousel-slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 100%);
+    z-index: 1;
+} */
+
+/* 移除文字内容样式，因为现在只显示图片
+.demands-carousel-slide-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    padding: 30px;
+    max-width: 800px;
+}
+
+.demands-carousel-slide-content h3 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.demands-carousel-slide-content p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    line-height: 1.6;
+}
+*/
+
+.demands-carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6); /* 改为深色背景，提高可见性 */
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 15px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    z-index: 10;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* 添加阴影增强立体感 */
+}
+
+.demands-carousel-btn:hover {
+    background: rgba(0, 0, 0, 0.8); /* 悬停时更深 */
+    transform: translateY(-50%) scale(1.1); /* 悬停时稍微放大 */
+}
+
+.demands-carousel-btn.prev {
+    left: 20px;
+}
+
+.demands-carousel-btn.next {
+    right: 20px;
+}
+
+.demands-carousel-dots {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    z-index: 10;
+}
+
+.demands-carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.6); /* 改为深色背景，提高可见性 */
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); /* 添加阴影增强立体感 */
+}
+
+.demands-carousel-dot.active {
+    background: rgba(0, 0, 0, 0.9); /* 激活状态使用更深的颜色 */
+    transform: scale(1.3); /* 激活状态稍微放大 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4); /* 激活状态阴影更深 */
+}
+
+/* 响应式设计 */
+@media (max-width: 992px) {
+    .demands-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .demands-tabs {
+        flex: none;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .demands-tab {
+        flex: 1;
+        min-width: 150px;
+        text-align: center;
+        border-left: none;
+        border-bottom: 4px solid transparent;
+    }
+
+    .demands-tab:hover {
+        transform: translateY(-3px);
+    }
+
+    .demands-tab.active {
+        transform: translateY(-3px);
+        border-left: none;
+        border-bottom-color: #2980b9;
+    }
+
+    .demands-content {
+        min-height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .demands-carousel-slide-content h3 {
+        font-size: 2rem;
+    }
+
+    .demands-carousel-slide-content p {
+        font-size: 1.1rem;
+    }
+
+    .demands-carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .demands-tab {
+        min-width: 120px;
+        padding: 12px 15px;
+        font-size: 0.9rem;
+    }
+
+    .demands-carousel-slide-content h3 {
+        font-size: 1.8rem;
+    }
+
+    .demands-carousel-slide-content p {
+        font-size: 1rem;
+    }
+
+    .demands-carousel-dots {
+        bottom: 20px;
+    }
+}
+
+/* 设计部分样式 */
+.design {
+    background-color: #f8f9fa;
+}
+
+.design-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.design-card {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.design-card h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #2ecc71;
+    padding-bottom: 10px;
+}
+
+.floor-plan {
+    margin-bottom: 25px;
+}
+
+.floor-plan h4 {
+    color: #2ecc71;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+/* 设计模块两级切换样式 - 新版（二级菜单在左边） */
+.design-container {
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* 左边面板：包含一级和二级切换按钮 */
+.design-left-panel {
+    width: 250px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* 一级切换按钮 */
+.design-primary-tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.design-primary-tab {
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.design-primary-tab:hover {
+    border-color: #3498db;
+    color: #3498db;
+    transform: translateX(5px);
+}
+
+.design-primary-tab.active {
+    background: #3498db;
+    border-color: #3498db;
+    color: white;
+    transform: translateX(5px);
+}
+
+/* 二级切换按钮 */
+.design-secondary-tabs {
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    padding-left: 20px;
+    border-left: 2px solid #e0e0e0;
+    margin-top: 10px;
+}
+
+.design-secondary-tabs.active {
+    display: flex;
+}
+
+.design-secondary-tab {
+    background: #f8f9fa;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 10px 15px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.design-secondary-tab:hover {
+    border-color: #3498db;
+    color: #3498db;
+}
+
+.design-secondary-tab.active {
+    background: #3498db;
+    border-color: #3498db;
+    color: white;
+}
+
+/* 设计内容区域 */
+.design-content {
+    flex: 1;
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    min-height: 500px;
+}
+
+/* 二级内容区域 */
+.design-secondary-tab-content {
+    display: none;
+}
+
+.design-secondary-tab-content.active {
+    display: block;
+}
+
+/* 设计模块轮播图 */
+.design-carousel-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #f8f9fa;
+}
+
+.design-carousel-slides {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease;
+}
+
+.design-carousel-slide {
+    flex: 0 0 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.design-carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+    z-index: 10;
+}
+
+.design-carousel-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.design-carousel-btn.prev {
+    left: 20px;
+}
+
+.design-carousel-btn.next {
+    right: 20px;
+}
+
+.design-carousel-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    z-index: 10;
+}
+
+.design-carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.design-carousel-dot:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.design-carousel-dot.active {
+    background: #3498db;
+    transform: scale(1.2);
+}
+
+/* 响应式设计 */
+@media (max-width: 992px) {
+    .design-container {
+        flex-direction: column;
+    }
+
+    .design-primary-tabs {
+        width: 100%;
+        flex-direction: row;
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+
+    .design-primary-tab {
+        white-space: nowrap;
+        min-width: 150px;
+    }
+
+    .design-secondary-tabs {
+        overflow-x: auto;
+        padding-bottom: 15px;
+    }
+
+    .design-secondary-tab {
+        white-space: nowrap;
+    }
+
+    .design-carousel-container {
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .design-content {
+        padding: 20px;
+    }
+
+    .design-carousel-container {
+        height: 300px;
+    }
+
+    .design-carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+}
+
+.floor-plan ul {
+    list-style-position: inside;
+    color: #555;
+}
+
+.floor-plan li {
+    margin-bottom: 8px;
+    padding-left: 5px;
+}
+
+.style-item {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-left: 4px solid #9b59b6;
+}
+
+.style-item h4 {
+    color: #9b59b6;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.style-item p {
+    color: #555;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.style-subtypes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.style-subtype {
+    background: #e8e8e8;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* 施工部分样式 */
+.construction {
+    background-color: white;
+}
+
+.construction-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.construction-card {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.construction-card h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #e74c3c;
+    padding-bottom: 10px;
+}
+
+.construction-card p {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.phase-item {
+    margin-bottom: 25px;
+}
+
+.phase-item h4 {
+    color: #e74c3c;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.phase-item ul {
+    list-style-position: inside;
+    color: #555;
+}
+
+.phase-item li {
+    margin-bottom: 8px;
+    padding-left: 5px;
+}
+
+.quality-points {
+    background: #fff5f5;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #e74c3c;
+}
+
+.quality-points ul {
+    list-style-position: inside;
+    color: #555;
+}
+
+.quality-points li {
+    margin-bottom: 10px;
+    padding-left: 5px;
+}
+
+/* 联系我们样式 */
+.contact {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.contact .section-title {
+    color: white;
+}
+
+.contact .section-subtitle {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.service-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.service-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    color: #3498db;
+    margin-bottom: 20px;
+}
+
+.service-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.service-item p {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.contact-info {
+    text-align: center;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.contact-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.contact-info > p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.contact-details p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+}
+
+.contact-details i {
+    color: #3498db;
+    font-size: 1.2rem;
+}
+
+/* 页脚样式 */
+.footer {
+    background: #2c3e50;
+    color: white;
+    padding: 50px 0 30px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-logo {
+    margin-bottom: 30px;
+}
+
+.footer-logo h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.footer-logo p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-links {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #3498db;
+}
+
+.footer-copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    width: 100%;
+}
+
+.footer-copyright p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        gap: 15px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content .english-title {
+        font-size: 1.5rem;
+    }
+
+    .hero-content .hero-description {
+        font-size: 1.1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .carousel-slide-content h2 {
+        font-size: 2rem;
+    }
+
+    .carousel-slide-content p {
+        font-size: 1.2rem;
+    }
+
+    .service-highlights {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .cta-button {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .demand-card,
+    .design-card,
+    .construction-card {
+        padding: 20px;
+    }
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.demand-card,
+.design-card,
+.construction-card,
+.service-item {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3498db;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #2980b9;
+}
+

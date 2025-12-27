@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>崇明岛乡村住宅 - 创新产品课题研发</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>崇明岛乡村住宅</h1>
+                <p class="subtitle">属于一群人的乡村记忆</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">首页</a></li>
+                <li><a href="#demands">诉求</a></li>
+                <li><a href="#design">设计</a></li>
+                <li><a href="#construction">施工</a></li>
+                <li><a href="#contact">联系我们</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 轮播图 -->
+    <section class="hero" id="home">
+        <div class="carousel-container">
+            <div class="carousel-slides" id="carouselSlides">
+                <!-- 轮播图内容由JavaScript动态生成 -->
+            </div>
+            <button class="carousel-btn prev" id="prevBtn">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="carousel-btn next" id="nextBtn">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <div class="carousel-dots" id="carouselDots">
+                <!-- 轮播图指示点由JavaScript动态生成 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 诉求部分 -->
+    <section class="section demands" id="demands">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">01 <span class="title-text">诉求</span></h2>
+                <p class="section-subtitle">Demands</p>
+            </div>
+
+            <div class="demands-container">
+                <!-- 左边：6个切换按钮 -->
+                <div class="demands-tabs">
+                    <button class="demands-tab active" data-tab="tab1">自建房现状</button>
+                    <button class="demands-tab" data-tab="tab2">政策支持</button>
+                    <button class="demands-tab" data-tab="tab3">年龄结构</button>
+                    <button class="demands-tab" data-tab="tab4">使用需求</button>
+                    <button class="demands-tab" data-tab="tab5">风格喜好</button>
+                    <button class="demands-tab" data-tab="tab6">预算范围</button>
+                </div>
+
+                <!-- 右边：内容区域 -->
+                <div class="demands-content">
+                    <!-- 子模块1：自建房现状 -->
+                    <div class="demands-tab-content active" id="tab1">
+                        <div class="demands-carousel-container">
+                            <div class="demands-carousel-slides" id="demandsCarouselSlides1">
+                                <!-- 轮播图内容由JavaScript动态生成 -->
+                            </div>
+                            <button class="demands-carousel-btn prev">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="demands-carousel-btn next">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                            <div class="demands-carousel-dots" id="demandsCarouselDots1">
+                                <!-- 轮播图指示点由JavaScript动态生成 -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 子模块2：政策支持 -->
+                    <div class="demands-tab-content" id="tab2">
+                        <div class="demands-carousel-container">
+                            <div class="demands-carousel-slides" id="demandsCarouselSlides2">
+                                <!-- 轮播图内容由JavaScript动态生成 -->
+                            </div>
+                            <button class="demands-carousel-btn prev">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="demands-carousel-btn next">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                            <div class="demands-carousel-dots" id="demandsCarouselDots2">
+                                <!-- 轮播图指示点由JavaScript动态生成 -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 子模块3：年龄结构 -->
+                    <div class="demands-tab-content" id="tab3">
+                        <div class="demands-carousel-container">
+                            <div class="demands-carousel-slides" id="demandsCarouselSlides3">
+                                <!-- 轮播图内容由JavaScript动态生成 -->
+                            </div>
+                            <button class="demands-carousel-btn prev">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="demands-carousel-btn next">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                            <div class="demands-carousel-dots" id="demandsCarouselDots3">
+                                <!-- 轮播图指示点由JavaScript动态生成 -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 子模块4：使用需求 -->
+                    <div class="demands-tab-content" id="tab4">
+                        <div class="demands-carousel-container">
+                            <div class="demands-carousel-slides" id="demandsCarouselSlides4">
+                                <!-- 轮播图内容由JavaScript动态生成 -->
+                            </div>
+                            <button class="demands-carousel-btn prev">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="demands-carousel-btn next">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                            <div class="demands-carousel-dots" id="demandsCarouselDots4">
+                                <!-- 轮播图指示点由JavaScript动态生成 -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 子模块5：风格喜好 -->
+                    <div class="demands-tab-content" id="tab5">
+                        <div class="demands-carousel-container">
+                            <div class="demands-carousel-slides" id="demandsCarouselSlides5">
+                                <!-- 轮播图内容由JavaScript动态生成 -->
+                            </div>
+                            <button class="demands-carousel-btn prev">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="demands-carousel-btn next">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                            <div class="demands-carousel-dots" id="demandsCarouselDots5">
+                                <!-- 轮播图指示点由JavaScript动态生成 -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 子模块6：预算范围 -->
+                    <div class="demands-tab-content" id="tab6">
+                        <div class="demands-carousel-container">
+                            <div class="demands-carousel-slides" id="demandsCarouselSlides6">
+                                <!-- 轮播图内容由JavaScript动态生成 -->
+                            </div>
+                            <button class="demands-carousel-btn prev">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="demands-carousel-btn next">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                            <div class="demands-carousel-dots" id="demandsCarouselDots6">
+                                <!-- 轮播图指示点由JavaScript动态生成 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 设计部分 -->
+    <section class="section design" id="design">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">02 <span class="title-text">设计</span></h2>
+                <p class="section-subtitle">Design</p>
+            </div>
+            <div class="design-container">
+                <!-- 左边：一级和二级切换按钮 -->
+                <div class="design-left-panel">
+                    <!-- 一级切换按钮 -->
+                    <div class="design-primary-tabs">
+                        <button class="design-primary-tab active" data-tab="tab1">平面设计</button>
+                        <button class="design-primary-tab" data-tab="tab2">立面设计</button>
+                    </div>
+
+                    <!-- 二级切换按钮（平面设计） -->
+                    <div class="design-secondary-tabs active" id="secondaryTabsTab1">
+                        <button class="design-secondary-tab active" data-tab="tab1_1">设计原则</button>
+                        <button class="design-secondary-tab" data-tab="tab1_2">功能布局</button>
+                        <button class="design-secondary-tab" data-tab="tab1_3">平面设计</button>
+                    </div>
+
+                    <!-- 二级切换按钮（立面设计） -->
+                    <div class="design-secondary-tabs" id="secondaryTabsTab2">
+                        <button class="design-secondary-tab active" data-tab="tab2_1">设计要点</button>
+                        <button class="design-secondary-tab" data-tab="tab2_2">设计模块</button>
+                        <button class="design-secondary-tab" data-tab="tab2_3">风格模式</button>
+                    </div>
+                </div>
+
+                <!-- 右边：内容区域 -->
+                <div class="design-content">
+                    <!-- 二级切换1：设计原则 -->
+                    <div class="design-secondary-tab-content active" id="tab1_1">
+                        <div class="design-carousel-container">
+                            <div class="design-carousel-slides" id="designCarouselSlides1_1">
+                                <!-- 轮播图内容由JavaScript动态生成 -->
+                            </div>
+                            <button class="design-carousel-btn prev">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="design-carousel-btn next">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                            <div class="design-carousel-dots" id="designCarouselDots1_1">
+                                <!-- 轮播图指示点由JavaScript动态生成 -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 二级切换2：功能布局 -->
+                    <div class="design-secondary-tab-content" id="tab1_2">
+                        <div class="design-carousel-container">
+                            <div class="design-carousel-slides" id="designCarouselSlides1_2">
+                                <!-- 轮播图内容由JavaScript动态生成 -->
+                            </div>
+                            <button class="design-carousel-btn prev">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="design-carousel-btn next">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                            <div class="design-carousel-dots" id="designCarouselDots1_2">
+                                <!-- 轮播图指示点由JavaScript动态生成 -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 二级切换3：平面设计 -->
+                    <div class="design-secondary-tab-content" id="tab1_3">
+                        <div class="design-carousel-container">
+                            <div class="design-carousel-slides" id="designCarouselSlides1_3">
+                                <!-- 轮播图内容由JavaScript动态生成 -->
+                            </div>
+                            <button class="design-carousel-btn prev">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="design-carousel-btn next">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                            <div class="design-carousel-dots" id="designCarouselDots1_3">
+                                <!-- 轮播图指示点由JavaScript动态生成 -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 二级切换4：设计要点 -->
+                    <div class="design-secondary-tab-content" id="tab2_1">
+                        <div class="design-carousel-container">
+                            <div class="design-carousel-slides" id="designCarouselSlides2_1">
+                                <!-- 轮播图内容由JavaScript动态生成 -->
+                            </div>
+                            <button class="design-carousel-btn prev">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="design-carousel-btn next">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                            <div class="design-carousel-dots" id="designCarouselDots2_1">
+                                <!-- 轮播图指示点由JavaScript动态生成 -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 二级切换5：设计模块 -->
+                    <div class="design-secondary-tab-content" id="tab2_2">
+                        <div class="design-carousel-container">
+                            <div class="design-carousel-slides" id="designCarouselSlides2_2">
+                                <!-- 轮播图内容由JavaScript动态生成 -->
+                            </div>
+                            <button class="design-carousel-btn prev">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="design-carousel-btn next">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                            <div class="design-carousel-dots" id="designCarouselDots2_2">
+                                <!-- 轮播图指示点由JavaScript动态生成 -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 二级切换6：风格模式 -->
+                    <div class="design-secondary-tab-content" id="tab2_3">
+                        <div class="design-carousel-container">
+                            <div class="design-carousel-slides" id="designCarouselSlides2_3">
+                                <!-- 轮播图内容由JavaScript动态生成 -->
+                            </div>
+                            <button class="design-carousel-btn prev">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="design-carousel-btn next">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                            <div class="design-carousel-dots" id="designCarouselDots2_3">
+                                <!-- 轮播图指示点由JavaScript动态生成 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 施工部分 -->
+    <section class="section construction" id="construction">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">03 <span class="title-text">施工</span></h2>
+                <p class="section-subtitle">Construction</p>
+            </div>
+
+            <div class="demands-container">
+                <!-- 左边：切换按钮 -->
+                <div class="demands-tabs">
+                    <button class="demands-tab active" data-tab="tab1">施工目录</button>
+                    <!-- 注意：2_前期准备目录是空的，所以暂时只有一个切换按钮 -->
+                </div>
+
+                <!-- 右边：内容区域 -->
+                <div class="demands-content">
+                    <!-- 子模块1：施工目录 -->
+                    <div class="demands-tab-content active" id="tab1">
+                        <div class="demands-carousel-container">
+                            <div class="demands-carousel-slides" id="constructionCarouselSlides1">
+                                <!-- 轮播图内容由JavaScript动态生成 -->
+                            </div>
+                            <button class="demands-carousel-btn prev">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="demands-carousel-btn next">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                            <div class="demands-carousel-dots" id="constructionCarouselDots1">
+                                <!-- 轮播图指示点由JavaScript动态生成 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 联系我们 -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">联系我们</h2>
+                <p class="section-subtitle">一站式乡村住宅解决方案</p>
+            </div>
+            <div class="contact-content">
+                <div class="service-highlights">
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fas fa-pencil-ruler"></i>
+                        </div>
+                        <h3>包设计</h3>
+                        <p>上门勘测宅基地，结合崇明建房规范与人群需求，定制含防潮抗风、功能分区的方案，提供3D效果图，修改至满意。</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fas fa-file-contract"></i>
+                        </div>
+                        <h3>代审批</h3>
+                        <p>专人对接村、镇部门，代办宅基地与规划许可，落实"四到场"要求，依托"一网通办"缩短时限，确保合规。</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fas fa-hard-hat"></i>
+                        </div>
+                        <h3>包施工</h3>
+                        <p>自有团队标准化施工，涵盖建材采购、基础浇筑、主体搭建、水电安装、装修装饰，适配海岛气候。</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <h3>陪验收</h3>
+                        <p>组织多部门联合验收，核查面积、高度、质量等是否达标，出具验收报告与竣工资料。</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>保售后</h3>
+                        <p>提供主体结构5年、防水5年质保，对接补贴申请，及时响应维修需求，全程无需业主奔波。</p>
+                    </div>
+                </div>
+                <div class="contact-info">
+                    <h3>IT'S EASY TO RETURN HOME AND BUILD HOUSES</h3>
+                    <p>回乡建房 省心省力</p>
+                    <div class="contact-details">
+                        <p><i class="fas fa-phone"></i> 咨询热线: 400-xxx-xxxx</p>
+                        <p><i class="fas fa-envelope"></i> 邮箱: info@chongminghouses.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 地址: 上海市崇明区xxx路xxx号</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>崇明岛乡村住宅</h3>
+                    <p>创新产品课题研发｜乡村住宅研究报告</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">首页</a>
+                    <a href="#demands">诉求</a>
+                    <a href="#design">设计</a>
+                    <a href="#construction">施工</a>
+                    <a href="#contact">联系我们</a>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2025 崇明岛乡村住宅项目. 保留所有权利.</p>
+                    <p>本页面内容基于《崇明岛乡村住宅》PPT研究报告制作</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- JavaScript文件 -->
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
